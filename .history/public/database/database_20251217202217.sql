@@ -1,0 +1,15 @@
+CREATE DATABASE livraison.
+USE livraison.
+
+CREATE TABLE livraisonChauffeur (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(100)
+);
+
+CREATE TABLE livraisonVoiture(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(100)
+);
+
+			- livraisonColis : id, nom, kg
+CREATE TABLE 

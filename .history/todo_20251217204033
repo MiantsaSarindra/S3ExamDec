@@ -1,6 +1,6 @@
 - Gestion des livraisons
-[ok]- Base	(Harena)
-	[ok]. Creer les tables:
+	- Base	(Harena)
+		[]. Creer les tables:
 			- livraisonChauffeur : id, nom
 			- livraisonVoiture : id, nom
 			- livraisonColis : id, nom, kg
@@ -10,7 +10,7 @@
 			- livraisonSocieteEntrepot : id, entrepot, idSociete
 			- Equivalence : id, kg, montant
 
-	[ok]. Inserer les données pour:
+		. Inserer les données pour:
 			- Chauffeur
 			- Voiture
 			- Colis

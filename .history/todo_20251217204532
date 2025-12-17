@@ -1,5 +1,5 @@
 - Gestion des livraisons
-[ok]- Base	(Harena)
+	- Base	(Harena)
 	[ok]. Creer les tables:
 			- livraisonChauffeur : id, nom
 			- livraisonVoiture : id, nom
