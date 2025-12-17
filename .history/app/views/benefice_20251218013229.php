@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -38,14 +36,14 @@
             </thead>
     
             <tbody>
-                <tr>
-                    <?php foreach($bilans as $bilan) { ?>
-                        <td><?php echo $bilan['chiffreAffaire'] ?></td>
-                        <td><?php echo $bilan['coutRevient'] ?></td>
-                        <td><?php echo $bilan['benefice'] ?></td>
-                        <td><?php echo $bilan['date'] ?></td>
-                    <?php } ?>
-                </tr>
+            <tr>
+                <?php foreach($bilans as $bilan) { ?>
+                    <td><?php echo $bilan['chiffreAffaire'] ?></td>
+                    <td><?php echo $bilan['coutRevient'] ?></td>
+                    <td><?php echo $bilan['benefice'] ?></td>
+                    <td><?php echo $bilan['date'] ?></td>
+                <?php } ?>
+            </tr>
             </tbody>
 
             <tfoot>
@@ -56,6 +54,29 @@
                 </tr>
             </tfoot>
         </table>
-    </div>
+
+    <h3>Les benefices par periode</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Chiffre d'affaire</td>
+                <td>Cout de revient</td>
+                <td>Benefice</td>
+                <td>Date</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <?php foreach($bilans as $bilan) { ?>
+                    <td><?php echo $bilan['chiffreAffaire'] ?></td>
+                    <td><?php echo $bilan['coutRevient'] ?></td>
+                    <td><?php echo $bilan['benefice'] ?></td>
+                    <td><?php echo $bilan['date'] ?></td>
+                <?php } ?>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
