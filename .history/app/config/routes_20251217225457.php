@@ -13,26 +13,25 @@ use flight\net\Router;
 // This wraps all routes in the group with the SecurityHeadersMiddleware
 $router->group('', function(Router $router) use ($app) {
 
-	// Si filter par date
 	$router->post('/livraison/bilan', function() use ($app) {
 		$jour  = $_POST['jour'];
 		$mois  = $_POST['mois']; 
 		$annee  = $_POST['annee'];
 		 
 		$LivraisonController = new LivraisonController(Flight::app());
-		$bilans = $LivraisonController-> getBilan($jour, $mois, $annee);
-		$app->render('benefice', ['bilans' => $bilans]);
+		$bilan = $LivraisonController-> getBilan($jour, $mois, $annee);
+		$app->render('benefice', ['bilan' => $bilan]);
 	});
-
-	// Si pas filter par date
-	$router->get('/livraison/bilan', function() use ($app) {
+		
+	Si 
+	$router->get('/livraison/bilanRecherche', function() use ($app) {
 		$jour  = "";
 		$mois  = "";
 		$annee  = "";
 
 		$LivraisonController = new LivraisonController(Flight::app());
-		$bilans = $LivraisonController-> getBilan($jour, $mois, $annee);
-		$app->render('benefice', ['bilans' => $bilans]);
+		$bilan = $LivraisonController-> getBilan($jour, $mois, $annee);
+		$app->render('benefice', ['bilan' => $bilan]);
 	});
 
 	$router->get('/hello-world/@name', function($name) {

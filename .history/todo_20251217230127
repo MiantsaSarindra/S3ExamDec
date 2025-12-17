@@ -46,7 +46,7 @@
 					. appel de LivraisonModel : update() : statut -> livré, salaire -> vrai salaire, benefice -> appel de calculBenefice()
 					. appel de SocieteModel : update() : chiffreAffaire -> + montant, coutRevient -> + salaire
 
-[ok]- Page pour afficher benefice par periode	(Harena)
+- Page pour afficher benefice par periode	(Harena)
 [ok]- Base	(Harena)
 		. utiliser :
 			. livraisonLivraison

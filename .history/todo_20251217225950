@@ -46,12 +46,12 @@
 					. appel de LivraisonModel : update() : statut -> livré, salaire -> vrai salaire, benefice -> appel de calculBenefice()
 					. appel de SocieteModel : update() : chiffreAffaire -> + montant, coutRevient -> + salaire
 
-[ok]- Page pour afficher benefice par periode	(Harena)
-[ok]- Base	(Harena)
+- Page pour afficher benefice par periode	(Harena)
+	- Base	(Harena)
 		. utiliser :
 			. livraisonLivraison
 
-[ok]- Design	(Harena)
+	- Design	(Harena)
 		. Formulaire de saisie de date:
 			. input jour
 			. input mois
@@ -62,6 +62,6 @@
 [ok]- Fonction	(Harena)
 		. LivraisonModel : getBilan() => group by date de livraison
 
-[ok]- Integration	(Harena)
+- Integration	(Harena)
 		. LivraisonController : (Si lien)
 			. appel de LivraisonModel : getBilan()

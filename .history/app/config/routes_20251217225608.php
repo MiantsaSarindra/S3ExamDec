@@ -20,8 +20,8 @@ $router->group('', function(Router $router) use ($app) {
 		$annee  = $_POST['annee'];
 		 
 		$LivraisonController = new LivraisonController(Flight::app());
-		$bilans = $LivraisonController-> getBilan($jour, $mois, $annee);
-		$app->render('benefice', ['bilans' => $bilans]);
+		$bilan = $LivraisonController-> getBilan($jour, $mois, $annee);
+		$app->render('benefice', ['bilan' => $bilan]);
 	});
 
 	// Si pas filter par date
@@ -31,8 +31,8 @@ $router->group('', function(Router $router) use ($app) {
 		$annee  = "";
 
 		$LivraisonController = new LivraisonController(Flight::app());
-		$bilans = $LivraisonController-> getBilan($jour, $mois, $annee);
-		$app->render('benefice', ['bilans' => $bilans]);
+		$bilan = $LivraisonController-> getBilan($jour, $mois, $annee);
+		$app->render('benefice', ['bilan' => $bilan]);
 	});
 
 	$router->get('/hello-world/@name', function($name) {
