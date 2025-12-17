@@ -1,5 +1,5 @@
 - Gestion des livraisons
-	- Base
+	- Base	(Harena)
 		. Creer les tables:
 			- livraisonChauffeur : id, nom
 			- livraisonVoiture : id, nom
@@ -16,8 +16,8 @@
 			- Colis
 			- Statut
 
-	- Design
-		. Formulaire d insertion de livraison : 
+	- Design	(Miantsa)
+		. Formulaire d insertion de livraison :
 			- dropdown des colis en attente
 			- input text adresseDepart readonly : entrepot de societe
 			- input text adresseDestination
@@ -25,14 +25,14 @@
 			- boutton Annuler
 			- boutton Livrer
 
-	- Fonction
+	- Fonction	(Miantsa)
 		. ColisModel : getAll()
 		. VoitureModel : getAll()
 		. ChauffeurModel : getAll()
 		. SocieteModel : getEntrepot(), update()
 		. LivraisonModel : save(), update(), calculBenefice()
 
-	- Integration
+	- Integration	(Miantsa)
 		. LivraisonController : 
 			. doGet:
 				. appel de ColisModel : getAll()
@@ -46,21 +46,22 @@
 					. appel de LivraisonModel : update() : statut -> livré, salaire -> vrai salaire, benefice -> appel de calculBenefice()
 					. appel de SocieteModel : update() : chiffreAffaire -> + montant, coutRevient -> + salaire
 
-- Page pour afficher benefice par periode
-	- Base
+- Page pour afficher benefice par periode	(Harena)
+	- Base	(Harena)
 		. utiliser :
 			. livraisonLivraison
 
-	- Design
-		. Afficher un tableau pour voir les benefice par periode: chiffreAffaire, coutRevient, benefice, date
-
-	- Fonction
-		. LivraisonModel : getBilan() => group by date de livraison
-
-	- Integration
+	- Design	(Harena)
 		. Formulaire de saisie de date:
 			. input jour
 			. input mois
 			. input annee
 			. input submit rechercher
-		. tableau pour affichage: chiffreAffaire, coutRevient, benefice, date
+		. Afficher un tableau pour voir les benefice par periode: chiffreAffaire, coutRevient, benefice, date
+
+	- Fonction	(Harena)
+		. LivraisonModel : getBilan() => group by date de livraison
+
+	- Integration	(Harena)
+		. LivraisonController : (Si lien)
+			. appel de LivraisonModel : getBilan()
