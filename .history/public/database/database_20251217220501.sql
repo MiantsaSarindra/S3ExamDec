@@ -86,8 +86,7 @@ INSERT INTO livraisonVoiture (nom) VALUES
 ('Mercedes Sprinter'),
 ('Volkswagen Crafter');
 
--- Insertion pour livraisonColis
-INSERT INTO livraisonColis (nom, kg) VALUES
+-- Insertion pour livraisonColisINSERT INTO livraisonColis (nom, kg) VALUES
 ('Ordinateur portable', 3),
 ('Unité centrale', 8),
 ('Écran 24 pouces', 6),

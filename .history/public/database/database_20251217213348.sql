@@ -88,17 +88,16 @@ INSERT INTO livraisonVoiture (nom) VALUES
 
 -- Insertion pour livraisonColis
 INSERT INTO livraisonColis (nom, kg) VALUES
-('Ordinateur portable', 3),
-('Unité centrale', 8),
-('Écran 24 pouces', 6),
-('Imprimante', 12),
-('Télévision 55 pouces', 20),
-('Micro-ondes', 15),
-('Réfrigérateur', 70),
-('Machine à laver', 80),
-('Carton de livres', 25),
-('Colis alimentaire', 10);
-
+('Colis électronique', 5),
+('Colis vêtements', 8),
+('Colis alimentaire', 12),
+('Colis documents', 2),
+('Colis meubles', 45),
+('Colis pièces mécaniques', 30),
+('Colis matériel informatique', 18),
+('Colis médicaments', 4),
+('Colis livres', 10),
+('Colis divers', 6);
 
 -- Insertion pour livraisonStatut
 INSERT INTO livraisonStatut (valeur) VALUES 

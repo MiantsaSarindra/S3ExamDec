@@ -87,18 +87,6 @@ INSERT INTO livraisonVoiture (nom) VALUES
 ('Volkswagen Crafter');
 
 -- Insertion pour livraisonColis
-INSERT INTO livraisonColis (nom, kg) VALUES
-('Ordinateur portable', 3),
-('Unité centrale', 8),
-('Écran 24 pouces', 6),
-('Imprimante', 12),
-('Télévision 55 pouces', 20),
-('Micro-ondes', 15),
-('Réfrigérateur', 70),
-('Machine à laver', 80),
-('Carton de livres', 25),
-('Colis alimentaire', 10);
-
 
 -- Insertion pour livraisonStatut
 INSERT INTO livraisonStatut (valeur) VALUES 
