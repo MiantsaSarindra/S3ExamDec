@@ -14,10 +14,10 @@
 			- Chauffeur
 			- Voiture
 			- Colis
-			- Statut sss
+			- Statut
 
 	- Design	(Miantsa)
-		. Formulaire d insertion de livraison :
+		. Formulaire d insertion de livraison 
 			- dropdown des colis en attente
 			- input text adresseDepart readonly : entrepot de societe
 			- input text adresseDestination
