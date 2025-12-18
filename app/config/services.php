@@ -79,6 +79,11 @@ if (Debugger::$showBar === true && php_sapi_name() !== 'cli') {
  **********************************************/
 // Uncomment and configure the following for your database:
 
+Flight::register('db', PDO::class, array(
+    'mysql:host=' . $config['database']['host']. ';dbname=' . $config['database']['dbname'] . ';charset=utf8',
+    'root',
+    ''
+));
 // MySQL Example:
 // $dsn = 'mysql:host=' . $config['database']['host'] . ';dbname=' . $config['database']['dbname'] . ';charset=utf8mb4';
 
