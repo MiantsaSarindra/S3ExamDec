@@ -24,11 +24,4 @@ class VoitureController {
 		return $voitures;
 	}
 
-	public static function getById($id) {
-		$VoitureModel = new VoitureModel(Flight::db());
-		$voitures = $VoitureModel->getById($id);
-
-		return $voitures;
-	}
-
 }

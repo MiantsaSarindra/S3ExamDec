@@ -24,10 +24,12 @@ class VoitureController {
 		return $voitures;
 	}
 
-	public static function getById($id) {
+	public static function getById() {
 		$VoitureModel = new VoitureModel(Flight::db());
-		$voitures = $VoitureModel->getById($id);
+		$voitures = $VoitureModel->getById();
 
+		// Flight::render('livrer', ['voitures' => $voitures]);
+		// $this->app->json($produits, 200, true, 'utf-8', JSON_PRETTY_PRINT);
 		return $voitures;
 	}
 

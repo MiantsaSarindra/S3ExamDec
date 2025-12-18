@@ -23,11 +23,4 @@ class ChauffeurController {
 		return $chauffeur;
 	}
 
-	public static function getById() {
-		$ChauffeurModel = new ChauffeurModel(Flight::db());
-		$chauffeur = $ChauffeurModel->getById($id);
-
-		return $chauffeur;
-	}
-
 }

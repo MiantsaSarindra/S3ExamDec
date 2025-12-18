@@ -23,10 +23,12 @@ class ColisController {
 		return $colis;
 	}
 
-	public static function getById($id) {
+	public static function getById() {
 		$ColisModel = new ColisModel(Flight::db());
-		$colis = $ColisModel->getById($id);
+		$colis = $ColisModel->getById();
 
+		// Flight::render('livrer', ['colis' => $colis]);
+		// $this->app->json($produits, 200, true, 'utf-8', JSON_PRETTY_PRINT);
 		return $colis;
 	}
 	

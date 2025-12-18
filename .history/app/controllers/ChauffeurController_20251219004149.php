@@ -27,6 +27,7 @@ class ChauffeurController {
 		$ChauffeurModel = new ChauffeurModel(Flight::db());
 		$chauffeur = $ChauffeurModel->getById($id);
 
+		// $this->app->json($produits, 200, true, 'utf-8', JSON_PRETTY_PRINT);
 		return $chauffeur;
 	}
 

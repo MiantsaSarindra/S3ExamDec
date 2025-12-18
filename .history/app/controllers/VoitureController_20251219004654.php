@@ -28,6 +28,8 @@ class VoitureController {
 		$VoitureModel = new VoitureModel(Flight::db());
 		$voitures = $VoitureModel->getById($id);
 
+		// Flight::render('livrer', ['voitures' => $voitures]);
+		// $this->app->json($produits, 200, true, 'utf-8', JSON_PRETTY_PRINT);
 		return $voitures;
 	}
 

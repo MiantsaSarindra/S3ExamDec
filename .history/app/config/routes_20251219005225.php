@@ -42,28 +42,29 @@ $router->group('', function(Router $router) use ($app) {
 
 	$router->get('/', function() use ($app) {
 		$ChauffeurController = new ChauffeurController(Flight::app());
-		$ColisController = new ColisController(Flight::app());
-		$VoitureController = new VoitureController(Flight::app());
-		$StatutController = new StatutController(Flight::app());
+		$chauffeur = $ChauffeurController->getById($id);
 
-		$LivraisonController = new LivraisonController(Flight::app());
+		$ColisController = new ColisController(Flight::app());
+		$colis = $ColisController->getById($id);
+
+		$VoitureController = new VoitureController(Flight::app());
+		$voiture = $VoitureController->getById($id);
+
+		$StatutController = new StatutController(Flight::app());
+		$statut = $StatutController->getById($id);
+
 		$listeLivraisons = $LivraisonController->getAttentente();
 		$data = [];
 		foreach ($listeLivraisons as $listeLivraison) {
-			$chauffeur = $ChauffeurController-> getById($listeLivraison['idChauffeur']);
-			$colis = $ColisController-> getById($listeLivraison['idColis']);
-			$voiture = $VoitureController-> getById($listeLivraison['idVoiture']);
-			$statut = $StatutController-> getById($listeLivraison['idStatut']);
-			
 			$data[] = [
-                    'id' => $listeLivraison['id'],
+                    'id' => $row['id'],
                     'Colis' => $colis,
-                    'adresseDepart' => $listeLivraison['adresseDepart'],
-                    'adresseDestination' => $listeLivraison['adresseDestination'],
+                    'adresseDepart' => $row['adresseDepart'],
+                    'adresseDestination' => $row['adresseDestination'],
                     'Statut' => $statut,
                     'Chauffeur' => $chauffeur,
                     'Voiture' => $voiture,
-                    'daty' => $listeLivraison['daty']
+                    'daty' => $row['daty']
 			];
 		}
 		$app->render('listeLivraison', ['listeLivraisons' => $data]);
@@ -74,9 +75,15 @@ $router->group('', function(Router $router) use ($app) {
 		$LivraisonController-> updateStatut($id);
 
 		$ChauffeurController = new ChauffeurController(Flight::app());
+
 		$ColisController = new ColisController(Flight::app());
+		$colis = $ColisController-> getById($id);
+
 		$VoitureController = new VoitureController(Flight::app());
+		$voiture = $VoitureController-> getById($id);
+
 		$StatutController = new StatutController(Flight::app());
+		$statut = $StatutController-> getById($id);
 
 		$listeLivraisons = $LivraisonController->getAttentente();
 		$data = [];

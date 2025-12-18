@@ -22,11 +22,12 @@ class ChauffeurController {
 		// $this->app->json($produits, 200, true, 'utf-8', JSON_PRETTY_PRINT);
 		return $chauffeur;
 	}
-
-	public static function getById() {
+	
+	public static function getAll() {
 		$ChauffeurModel = new ChauffeurModel(Flight::db());
-		$chauffeur = $ChauffeurModel->getById($id);
+		$chauffeur = $ChauffeurModel->getAll();
 
+		// $this->app->json($produits, 200, true, 'utf-8', JSON_PRETTY_PRINT);
 		return $chauffeur;
 	}
 

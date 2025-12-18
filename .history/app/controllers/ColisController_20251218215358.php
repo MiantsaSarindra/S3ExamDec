@@ -22,12 +22,5 @@ class ColisController {
 		// $this->app->json($produits, 200, true, 'utf-8', JSON_PRETTY_PRINT);
 		return $colis;
 	}
-
-	public static function getById($id) {
-		$ColisModel = new ColisModel(Flight::db());
-		$colis = $ColisModel->getById($id);
-
-		return $colis;
-	}
 	
 }

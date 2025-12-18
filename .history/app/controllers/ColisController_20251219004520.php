@@ -27,6 +27,8 @@ class ColisController {
 		$ColisModel = new ColisModel(Flight::db());
 		$colis = $ColisModel->getById($id);
 
+		// Flight::render('livrer', ['colis' => $colis]);
+		// $this->app->json($produits, 200, true, 'utf-8', JSON_PRETTY_PRINT);
 		return $colis;
 	}
 	

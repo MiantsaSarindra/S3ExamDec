@@ -46,7 +46,6 @@ $router->group('', function(Router $router) use ($app) {
 		$VoitureController = new VoitureController(Flight::app());
 		$StatutController = new StatutController(Flight::app());
 
-		$LivraisonController = new LivraisonController(Flight::app());
 		$listeLivraisons = $LivraisonController->getAttentente();
 		$data = [];
 		foreach ($listeLivraisons as $listeLivraison) {
