@@ -1,0 +1,50 @@
+
+.btn-outline-white{
+    border: 2px solid rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    color: rgb(255, 255, 255);
+}
+
+.btn-outline-white:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(5, 0, 100);
+}
+.btn-outline-blue-darck{
+    border: 2px solid rgb(5, 0, 100);
+    transition: all 0.3s ease;
+    color: rgb(5, 0, 100);
+}
+
+.btn-outline-blue-darck:hover{
+    background-color: rgb(5, 0, 100);
+    color: rgb(255, 255, 255);
+}
+/* header */
+.tete{
+    margin-left: 22%;
+}
+.tete h1{
+    margin-left: 7%;
+}
+ 
+.tete .logo{
+    width: 12%;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+.tete button{
+    margin-left: 60%;;
+}
+
+/* body */
+.my-border{
+    border: 2px solid rgb(5, 0, 100);
+}
+
+.filtre input{
+    height: 30px;
+}
+
+.filtre button{
+    margin-top: -5px;
+}

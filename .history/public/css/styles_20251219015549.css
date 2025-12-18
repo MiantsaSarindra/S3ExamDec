@@ -28,7 +28,8 @@ body {
         box-shadow 0.3s ease,
         background 0.3s ease;
     background: linear-gradient(90deg, #2369FF, #A631FF);
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);cursor: pointer;
+
 }
 .btn-outline-like-logo:hover{
     color: rgb(255, 255, 255);

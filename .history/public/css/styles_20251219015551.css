@@ -28,7 +28,8 @@ body {
         box-shadow 0.3s ease,
         background 0.3s ease;
     background: linear-gradient(90deg, #2369FF, #A631FF);
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);cursor: pointer;
+
 }
 .btn-outline-like-logo:hover{
     color: rgb(255, 255, 255);
@@ -36,7 +37,8 @@ body {
     background: linear-gradient(90deg, #1E6BFF, #9438FF);
     box-shadow: 
         0 0 12px rgba(35, 105, 255, 0.6),
-        0 0 24px rgba(166, 49, 255, 0.5);
+        0 0 24px rgba(166, 49, 255, 0.5);cursor: pointer;
+
 }
 /* header */
 .tete{

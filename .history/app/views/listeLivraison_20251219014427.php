@@ -16,18 +16,18 @@
     </header>
     
     <div class="container col-md-12">
-        <h2>Les livraisons en attente</h2>
+    <h2>Les livraisons en attente</h2>
 
         <ul class="responsive-table">
             <!-- En-tête -->
             <li class="table-header">
-                <div class="col col-1">Colis</div>
-                <div class="col col-2">Adresse de départ</div>
-                <div class="col col-2">Adresse de destination</div>
-                <div class="col col-1">Chauffeur</div>
-                <div class="col col-1">Voiture</div>
-                <div class="col col-1">Date</div>
-                <div class="col col-2">Action</div>
+            <div class="col col-1">Colis</div>
+            <div class="col col-2">Adresse de départ</div>
+            <div class="col col-2">Adresse de destination</div>
+            <div class="col col-1">Chauffeur</div>
+            <div class="col col-1">Voiture</div>
+            <div class="col col-1">Date</div>
+            <div class="col col-2">Action</div>
             </li>
 
             <!-- Ligne -->
@@ -39,7 +39,7 @@
                 <div class="col col-1" data-label="Voiture">Toyota Hiace</div>
                 <div class="col col-1" data-label="Date">18/12/2025</div>
                 <div class="col col-2" data-label="Action">
-                    <button class="btn btn-outline-like-logo btn-valider">Livrer</button>
+                    <button class="btn-valider">Livrer</button>
                 </div>
             </li>
 
@@ -51,21 +51,10 @@
                 <div class="col col-1" data-label="Voiture">Toyota Hiace</div>
                 <div class="col col-1" data-label="Date">18/12/2025</div>
                 <div class="col col-2" data-label="Action">
-                    <button class="btn btn-outline-like-logo btn-valider">Livrer</button>
+                    <button class="btn-valider">Livrer</button>
                 </div>
             </li>
 
-            <li class="table-row">
-                <div class="col col-1" data-label="Colis">42235</div>
-                <div class="col col-2" data-label="Adresse de départ">Antananarivo</div>
-                <div class="col col-2" data-label="Adresse de destination">Toamasina</div>
-                <div class="col col-1" data-label="Chauffeur">Jean</div>
-                <div class="col col-1" data-label="Voiture">Toyota Hiace</div>
-                <div class="col col-1" data-label="Date">18/12/2025</div>
-                <div class="col col-2" data-label="Action">
-                    <button class="btn btn-outline-like-logo btn-valider">Livrer</button>
-                </div>
-            </li>
         </ul>
     </div>
 </body>

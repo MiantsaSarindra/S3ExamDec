@@ -23,20 +23,13 @@ body {
 }
 
 .btn-outline-like-logo{
-    transition: 
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
-    background: linear-gradient(90deg, #2369FF, #A631FF);
-    color: rgb(255, 255, 255);
+    border: 2px solid rgb(5, 0, 100);
+    transition: all 0.3s ease;
+    color: rgb(5, 0, 100);
 }
 .btn-outline-like-logo:hover{
-    color: rgb(255, 255, 255);
-    transform: translateY(-4px) scale(1.03);
-    background: linear-gradient(90deg, #1E6BFF, #9438FF);
-    box-shadow: 
-        0 0 12px rgba(35, 105, 255, 0.6),
-        0 0 24px rgba(166, 49, 255, 0.5);
+  background: linear-gradient(90deg, #2369FF, #A631FF);
+    color: rgb(5, 0, 100)
 }
 /* header */
 .tete{

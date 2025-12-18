@@ -1,6 +1,4 @@
-body {
-  font-family: 'lato', sans-serif;
-}
+
 .btn-outline-white{
     border: 2px solid rgb(255, 255, 255);
     transition: all 0.3s ease;
@@ -20,23 +18,6 @@ body {
 .btn-outline-blue-darck:hover{
     background-color: rgb(5, 0, 100);
     color: rgb(255, 255, 255);
-}
-
-.btn-outline-like-logo{
-    transition: 
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
-    background: linear-gradient(90deg, #2369FF, #A631FF);
-    color: rgb(255, 255, 255);
-}
-.btn-outline-like-logo:hover{
-    color: rgb(255, 255, 255);
-    transform: translateY(-4px) scale(1.03);
-    background: linear-gradient(90deg, #1E6BFF, #9438FF);
-    box-shadow: 
-        0 0 12px rgba(35, 105, 255, 0.6),
-        0 0 24px rgba(166, 49, 255, 0.5);
 }
 /* header */
 .tete{
@@ -68,6 +49,10 @@ body {
     margin-top: -5px;
 }
 
+
+body {
+  font-family: 'lato', sans-serif;
+}
 .container {
   max-width: 1000px;
   margin-left: auto;
@@ -86,39 +71,61 @@ h2 {
 }
 
 .responsive-table {
-  list-style: none;
-  padding: 0;
-}
-
-.responsive-table li {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-.table-header { 
-    color: #ffffff;
-  background-color: #000b73;
-  font-weight: bold;
-}
-
-.table-row {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
     background-color: #ffffff;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-}
-
-.col {
-  padding: 5px;
-}
-
-/* Largeur colonnes */
-.col-1 { flex-basis: 14%; }
-.col-2 { flex-basis: 18%; }
-
-/* Bouton */
-.btn-valider {
-  padding: 5px 10px;
-  cursor: pointer;
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+      
+    }
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
 }

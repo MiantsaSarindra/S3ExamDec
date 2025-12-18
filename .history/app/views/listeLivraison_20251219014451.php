@@ -39,7 +39,7 @@
                 <div class="col col-1" data-label="Voiture">Toyota Hiace</div>
                 <div class="col col-1" data-label="Date">18/12/2025</div>
                 <div class="col col-2" data-label="Action">
-                    <button class="btn btn-outline-like-logo btn-valider">Livrer</button>
+                    <button class="btn-valider">Livrer</button>
                 </div>
             </li>
 
@@ -51,7 +51,7 @@
                 <div class="col col-1" data-label="Voiture">Toyota Hiace</div>
                 <div class="col col-1" data-label="Date">18/12/2025</div>
                 <div class="col col-2" data-label="Action">
-                    <button class="btn btn-outline-like-logo btn-valider">Livrer</button>
+                    <button class="btn-valider">Livrer</button>
                 </div>
             </li>
 
@@ -63,7 +63,7 @@
                 <div class="col col-1" data-label="Voiture">Toyota Hiace</div>
                 <div class="col col-1" data-label="Date">18/12/2025</div>
                 <div class="col col-2" data-label="Action">
-                    <button class="btn btn-outline-like-logo btn-valider">Livrer</button>
+                    <button class="btn-valider">Livrer</button>
                 </div>
             </li>
         </ul>
