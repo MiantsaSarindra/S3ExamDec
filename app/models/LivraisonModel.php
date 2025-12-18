@@ -42,5 +42,39 @@
 
             return $bilan;
         }
+
+        public function save($livraison) {
+            $sql = "
+                INSERT INTO livraisonLivraison (
+                    idColis,
+                    adresseDepart,
+                    adresseDestination,
+                    idStatut,
+                    idChauffeur,
+                    idVoiture,
+                    daty,
+                    salaire,
+                    montant,
+                    benefice
+                ) VALUES (
+                    ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+                )
+            ";
+
+            $stmt = $this->db->prepare($sql);
+
+            return $stmt->execute([
+                $livraison['idColis'],
+                $livraison['adresseDepart'],
+                $livraison['adresseDestination'],
+                $livraison['idStatut'],
+                $livraison['idChauffeur'],
+                $livraison['idVoiture'],
+                $livraison['daty'],
+                $livraison['salaire'],
+                $livraison['montant'],
+                $livraison['benefice']
+            ]);
+        }
     }
 ?>
