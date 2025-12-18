@@ -35,14 +35,38 @@ $router->group('', function(Router $router) use ($app) {
 		$app->render('benefice', ['bilans' => $bilans]);
 	});
 
-	$router->get('/hello-world/@name', function($name) {
-		echo '<h1>Hello world! Oh hey '.$name.'!</h1>';
+
+	// $ColisController = new ColisController($app);
+	$router->get('/livrer', function() {
+		LivraisonController::redirect(	ColisController::getAll(),
+										VoitureController::getAll(), 
+										SocieteEntrepotController::getEntrepot(1),
+										ChauffeurController::getAll()
+									);
 	});
 
-	$router->group('/api', function() use ($router) {
-		$router->get('/users', [ ApiExampleController::class, 'getUsers' ]);
-		$router->get('/users/@id:[0-9]', [ ApiExampleController::class, 'getUser' ]);
-		$router->post('/users/@id:[0-9]', [ ApiExampleController::class, 'updateUser' ]);
+	$router->post('/traitement', function() use ($app) {
+		LivraisonController::traiter(Flight::request()->data);
 	});
+	
+	// $router->get('/livrer', function() use ($app) {
+	// 	// ColisController::getAll();
+	// 	$colis = (new ColisController($app))->getAll();
+	// 	// $voitures = (new VoitureModel($db))->getAll();
+	// 	// $chauffeurs = (new ChauffeurModel($db))->getAll();
+
+	// 	// $app->render('livrer', ['colis' => $colis, 'voitures' => $voitures, 'chauffeurs' => $chauffeurs]);
+	// });
+
+	$router->group('/api', function() use ($router) {
+		// $router->get('/livrer', [ ColisController::class, 'getAll' ]);
+		// $router->get('/livrer', [ VoitureController::class, 'getAll' ]);
+		// $router->get('/livrer', [ ChauffeurController::class, 'getAll' ]);
+
+		// $router->get('/users', [ ApiExampleController::class, 'getUsers' ]);
+		// $router->get('/users/@id:[0-9]', [ ApiExampleController::class, 'getUser' ]);
+		// $router->post('/users/@id:[0-9]', [ ApiExampleController::class, 'updateUser' ]);
+	});
+	
 	
 }, [ SecurityHeadersMiddleware::class ]);
