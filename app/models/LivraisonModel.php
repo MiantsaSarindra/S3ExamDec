@@ -13,16 +13,16 @@
         public function getBilan($jour, $mois, $annee) {
 
             if (empty($jour) && empty($mois) && empty($annee)) {
-                $sql = "SELECT * FROM livraisonLivraison WHERE DAY(daty) = :jour AND MONTH(daty) = :mois AND YEAR(daty) = :annee";
+                $sql = "SELECT * FROM livraisonLivraison WHERE DAY(daty) = :jour AND MONTH(daty) = :mois AND YEAR(daty) = :annee ORDER BY daty DESC";
             }
             if (!empty($jour) && empty($mois) && empty($annee)) {
-                $sql = "SELECT * FROM livraisonLivraison WHERE MONTH(daty) = :mois AND YEAR(daty) = :annee";
+                $sql = "SELECT * FROM livraisonLivraison WHERE MONTH(daty) = :mois AND YEAR(daty) = :annee ORDER BY daty DESC";
             }
             if (!empty($jour) && !empty($mois) && empty($annee)) {
-                $sql = "SELECT * FROM livraisonLivraison WHERE YEAR(daty) = :annee";
+                $sql = "SELECT * FROM livraisonLivraison WHERE YEAR(daty) = :annee ORDER BY daty DESC";
             }
             if (!empty($jour) && !empty($mois) && !empty($annee)) {
-                $sql = "SELECT * FROM livraisonLivraison";
+                $sql = "SELECT * FROM livraisonLivraison ORDER BY daty DESC";
             }
             $stmt = $this->db->prepare($sql);
             $stmt->bindParam(':jour', $jour);
