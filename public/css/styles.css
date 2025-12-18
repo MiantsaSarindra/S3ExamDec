@@ -27,8 +27,13 @@
     margin-left: 7%;
 }
  
+.tete .logo{
+    width: 12%;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
 .tete button{
-    margin-left: 45%;
+    margin-left: 60%;
     height: 70%;
 }
 
