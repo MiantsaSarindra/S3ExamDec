@@ -33,7 +33,7 @@ CREATE TABLE livraisonLivraison (
     daty DATE,
     salaire DECIMAL(15,2),
     montant DECIMAL(15,2),
-    benefice DECIMAL(15,2)
+    benefice DECIMAL(15,2),
     FOREIGN KEY (idColis) REFERENCES livraisonColis(id),
     FOREIGN KEY (idStatut) REFERENCES livraisonStatut(id),
     FOREIGN KEY (idChauffeur) REFERENCES livraisonChauffeur(id),
