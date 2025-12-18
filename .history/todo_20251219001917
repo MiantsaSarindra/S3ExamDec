@@ -66,14 +66,14 @@
 		. LivraisonController : (Si lien)
 			. appel de LivraisonModel : getBilan()
 	
-[ok]- Page pour afficher les liste des liraison en attente
+- Page pour afficher les liste des liraison en attente
 [ok]- Base (Harena)
 		. utiliser : livraisonLivraison
 
 [ok]- Design (Harena)
 		. tableau
 	
-[ok]- Fonction (Harena)
+	- Fonction (Harena)
 		. livraisonColis : getById()
 		. livraisonStatut : getById()
 		. livraisonChauffeur : getById()
@@ -81,7 +81,7 @@
 		. LivraisonModel : getAttenten()
 		. LivraisonModel : livrer() => update statut
 
-[ok]- Integration (Harena)
+	. 	Integration (Harena)
 		. LivraisonController :
 			. appel de LivraisonModel : getAttenten()
 			. appel de LivraisonModel : livrer()
