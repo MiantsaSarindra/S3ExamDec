@@ -1,0 +1,90 @@
+- Gestion des livraisons
+[ok]- Base	(Harena)
+	[ok]. Creer les tables:
+			- livraisonChauffeur : id, nom
+			- livraisonVoiture : id, nom
+			- livraisonColis : id, nom, kg
+			- livraisonStatut : id, valeur
+			- livraisonLivraison : id, idColis, adresseDepart, adresseDestination, idStatut, idChauffeur, idVoiture, daty, salaire, montant, benefice
+			- livraisonSociete : id, nom, chiffreAffaire, coutRevient
+			- livraisonSocieteEntrepot : id, entrepot, idSociete
+			- Equivalence : id, kg, montant
+
+	[ok]. Inserer les données pour:
+			- Chauffeur
+			- Voiture
+			- Colis
+			- Statut
+
+	- Design	(Miantsa)
+		. Formulaire d insertion de livraison :
+			- dropdown des colis en attente
+			- input text adresseDepart readonly : entrepot de societe
+			- input text adresseDestination
+			- dropdown de voiture
+			- boutton Annuler
+			- boutton Livrer
+
+	- Fonction	(Miantsa)
+		. ColisModel : getAll()
+		. VoitureModel : getAll()
+		. ChauffeurModel : getAll()
+		. SocieteModel : getEntrepot(), update()
+		. LivraisonModel : save(), update(), calculBenefice()
+
+	- Integration	(Miantsa)
+		. LivraisonController : 
+			. doGet:
+				. appel de ColisModel : getAll()
+				. appel de VoitureModel : getAll()
+				. appel de ChauffeurModel : getAll()
+				. appel de SocieteModel : getEntrepot()
+			. doPost:
+				. Si boutton Annuler
+					. appel de LivraisonModel : update()
+				. Si boutton Livrer
+					. appel de LivraisonModel : update() : statut -> livré, salaire -> vrai salaire, benefice -> appel de calculBenefice()
+					. appel de SocieteModel : update() : chiffreAffaire -> + montant, coutRevient -> + salaire
+
+[ok]- Page pour afficher benefice par periode	(Harena)
+[ok]- Base	(Harena)
+		. utiliser :
+			. livraisonLivraison
+
+[ok]- Design	(Harena)
+		. Formulaire de saisie de date:
+			. input jour
+			. input mois
+			. input annee
+			. input submit rechercher
+		. Afficher un tableau pour voir les benefice par periode: chiffreAffaire, coutRevient, benefice, date
+
+[ok]- Fonction	(Harena)
+		. LivraisonModel : getBilan() => group by date de livraison
+
+[ok]- Integration	(Harena)
+		. LivraisonController : (Si lien)
+			. appel de LivraisonModel : getBilan()
+	
+- Page pour afficher les liste des liraison en attente
+	- Base (Harena)
+		. utiliser : livraisonLivraison
+
+	- Design (Harena)
+		. tableau
+	
+	- Fonction (Harena)
+		. livraisonColis : get
+		. LivraisonModel : getAttenten()
+		. LivraisonModel : livrer() => update statut
+
+	. 	Integration (Harena)
+		. LivraisonController :
+			. appel de LivraisonModel : getAttenten()
+			. appel de LivraisonModel : livrer()
+
+			
+     INT,
+    idStatut INT,
+    idChauffeur INT,
+    idVoiture INT,
