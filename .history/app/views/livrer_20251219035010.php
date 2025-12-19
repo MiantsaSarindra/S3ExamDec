@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livrer</title>
 </head>
 <body class="livrer-page">
     <header>
+        <h2>Insérer une livraison</h2>
     </header>
     <main>
         <form action="/traitement" method="post">

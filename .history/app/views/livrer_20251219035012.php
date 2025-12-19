@@ -10,6 +10,7 @@
 </head>
 <body class="livrer-page">
     <header>
+        <h2>Insérer une livraison</h2>
     </header>
     <main>
         <form action="/traitement" method="post">

@@ -10,6 +10,7 @@
 </head>
 <body class="livrer-page">
     <header>
+        <h2>Insérer une livraison</h2>
     </header>
     <main>
         <form action="/traitement" method="post">
@@ -18,9 +19,6 @@
             <label for="coli">Choisir un colis :</label>
             <select name="coli" id="coli">
                 <option value="">--Choisir un colis--</option>
-                <?php foreach($colis as $c) { ?>
-                    <option value="<?= $c['id'] ?>"><?= $c['nom'] ?></option>    
-                <?php } ?>
             </select>
 
             <label for="entrepot">Entrepôt :</label>
