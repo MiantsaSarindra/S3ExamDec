@@ -28,7 +28,7 @@ $router->group('', function(Router $router) use ($app) {
 		$app->render('benefice', ['bilans' => $bilans]);
 	});
 
-	$router->get('/livraisons', function() use ($app) {
+	$router->get('/livraison', function() use ($app) {
 		$app->render('livrer');
 	});
 

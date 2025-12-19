@@ -27,9 +27,6 @@ $router->group('', function(Router $router) use ($app) {
 		$bilans = $LivraisonController-> getBilan($jour, $mois, $annee);
 		$app->render('benefice', ['bilans' => $bilans]);
 	});
-
-	$router->get('/livraisons', function() use ($app) {
-		$app->render('livrer');
 	});
 
 	// Si pas filter par date

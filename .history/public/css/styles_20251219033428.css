@@ -125,6 +125,7 @@ h2 {
 
 /* livrer-page */
 
+
 .livrer-page * {
     margin: 0;
     padding: 0;
@@ -137,6 +138,13 @@ h2 {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.livrer-page header, .livrer-page footer {
+    background: linear-gradient(90deg, #2369FF, #A631FF);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
 }
 
 .livrer-page main {

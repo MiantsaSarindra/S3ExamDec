@@ -139,6 +139,13 @@ h2 {
     min-height: 100vh;
 }
 
+.livrer-page header, .livrer-page footer {
+    background: linear-gradient(90deg, #2369FF, #A631FF);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
 .livrer-page main {
     flex: 1;
     display: flex;

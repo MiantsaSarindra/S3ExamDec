@@ -10,10 +10,9 @@
 </head>
 <body class="livrer-page">
     <header>
-
+        
     </header>
     <main>
-        
         <form action="/traitement" method="post">
             <h1>Nouvelle Livraison</h1>
 

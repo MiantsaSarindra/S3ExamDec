@@ -28,10 +28,6 @@ $router->group('', function(Router $router) use ($app) {
 		$app->render('benefice', ['bilans' => $bilans]);
 	});
 
-	$router->get('/livraisons', function() use ($app) {
-		$app->render('livrer');
-	});
-
 	// Si pas filter par date
 	$router->get('/livraison/bilan', function() use ($app) {
 		$jour  = "";

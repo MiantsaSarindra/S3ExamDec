@@ -28,8 +28,8 @@ $router->group('', function(Router $router) use ($app) {
 		$app->render('benefice', ['bilans' => $bilans]);
 	});
 
-	$router->get('/livraisons', function() use ($app) {
-		$app->render('livrer');
+	$router->get('/', function() use ($app) {
+		$app->render('benefice', ['bilans' => $bilans]);
 	});
 
 	// Si pas filter par date

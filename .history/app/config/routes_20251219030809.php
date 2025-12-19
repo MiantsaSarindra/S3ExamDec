@@ -28,8 +28,14 @@ $router->group('', function(Router $router) use ($app) {
 		$app->render('benefice', ['bilans' => $bilans]);
 	});
 
-	$router->get('/livraisons', function() use ($app) {
-		$app->render('livrer');
+	$router->get('//bilan', function() use ($app) {
+		$jour  = "";
+		$mois  = "";
+		$annee  = "";
+
+		$LivraisonController = new LivraisonController(Flight::app());
+		$bilans = $LivraisonController-> getBilan($jour, $mois, $annee);
+		$app->render('benefice', ['bilans' => $bilans]);
 	});
 
 	// Si pas filter par date
